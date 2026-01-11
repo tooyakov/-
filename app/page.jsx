@@ -44,7 +44,9 @@ const steps = [
 
 export default function Home() {
   return (
-    <div>
+    <div className="page">
+      <div className="glow glow--one" aria-hidden="true" />
+      <div className="glow glow--two" aria-hidden="true" />
       <header className="container header">
         <div className="logo">APP.STUDIO</div>
         <nav className="nav">
@@ -87,14 +89,38 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="card">
-            <h3>Что получите</h3>
-            <ul>
-              <li>Четкий план и прозрачные сроки.</li>
-              <li>Современный UI/UX и понятная аналитика.</li>
-              <li>Техническое сопровождение после релиза.</li>
-              <li>Готовность быстро масштабироваться.</li>
-            </ul>
+          <div className="hero-panel">
+            <div className="hero-card">
+              <div className="hero-card__top">
+                <span className="chip">🚀 Fast MVP</span>
+                <span className="chip chip--ghost">Product Ready</span>
+              </div>
+              <h3>Что получите</h3>
+              <ul>
+                <li>Четкий план и прозрачные сроки.</li>
+                <li>Современный UI/UX и понятная аналитика.</li>
+                <li>Техническое сопровождение после релиза.</li>
+                <li>Готовность быстро масштабироваться.</li>
+              </ul>
+              <div className="hero-card__footer">
+                <span>⭐ 4.9</span>
+                <span>20+ клиентов</span>
+              </div>
+            </div>
+            <div className="hero-card hero-card--accent">
+              <h3>Пакет “Launch”</h3>
+              <p>Стратегия → Дизайн → Разработка → Запуск</p>
+              <div className="hero-metrics">
+                <div>
+                  <strong>+32%</strong>
+                  <span>рост заявок</span>
+                </div>
+                <div>
+                  <strong>6 недель</strong>
+                  <span>до запуска</span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
