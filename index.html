@@ -3,420 +3,90 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Полярный Штрих — портфолио визуального дизайнера</title>
-  <meta name="description" content="Портфолио Полины Сорокиной — визуальный дизайнер, бренд‑айдентика, UI и арт‑дирекшн." />
+  <title>Студия «Северная Линия» — главная</title>
+  <meta name="description" content="Северная Линия — портфолио и визуальные истории. Три страницы с разными направлениями." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #0c0f1a;
-      --surface: #141a2c;
-      --surface-light: #1b2340;
-      --text: #f3f5ff;
-      --muted: #a9b1d9;
-      --accent: #7cf6ff;
-      --accent-2: #f5d07a;
-      --stroke: rgba(124, 246, 255, 0.25);
-      --gradient: radial-gradient(circle at top left, rgba(124, 246, 255, 0.35), transparent 45%),
-        radial-gradient(circle at 75% 15%, rgba(245, 208, 122, 0.3), transparent 55%),
-        radial-gradient(circle at 15% 80%, rgba(129, 141, 255, 0.4), transparent 55%);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Manrope", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      background-image: var(--gradient);
-      min-height: 100vh;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 32px 6vw 24px;
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(18px);
-      background: rgba(12, 15, 26, 0.6);
-      border-bottom: 1px solid rgba(124, 246, 255, 0.08);
-      z-index: 10;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-family: "Unbounded", sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      font-size: 14px;
-    }
-
-    .logo-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #7cf6ff, #6b7bff, #f5d07a);
-      display: grid;
-      place-items: center;
-      color: #0c0f1a;
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    nav {
-      display: flex;
-      gap: 24px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    nav a:hover {
-      color: var(--text);
-    }
-
-    .cta {
-      padding: 12px 22px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #0c0f1a;
-      font-weight: 700;
-      font-size: 14px;
-      box-shadow: 0 12px 30px rgba(124, 246, 255, 0.3);
-    }
-
-    .hero {
-      display: grid;
-      gap: 32px;
-      padding: 80px 6vw 40px;
-    }
-
-    .hero-text {
-      max-width: 680px;
-    }
-
-    .hero h1 {
-      font-family: "Unbounded", sans-serif;
-      font-size: clamp(2.4rem, 4vw, 3.8rem);
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 28px;
-    }
-
-    .secondary-btn {
-      padding: 12px 20px;
-      border-radius: 999px;
-      border: 1px solid var(--stroke);
-      color: var(--text);
-      font-weight: 600;
-      background: rgba(20, 26, 44, 0.55);
-    }
-
-    .hero-card {
-      background: linear-gradient(160deg, rgba(20, 26, 44, 0.8), rgba(27, 35, 64, 0.85));
-      border-radius: 24px;
-      padding: 28px;
-      border: 1px solid rgba(124, 246, 255, 0.18);
-      box-shadow: 0 25px 60px rgba(5, 10, 25, 0.35);
-      max-width: 420px;
-    }
-
-    .hero-card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-
-    .hero-card ul {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-      align-items: center;
-    }
-
-    .section {
-      padding: 40px 6vw;
-    }
-
-    .section-title {
-      font-family: "Unbounded", sans-serif;
-      font-size: 1.5rem;
-      margin-bottom: 24px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
-
-    .project-card {
-      background: var(--surface);
-      border-radius: 18px;
-      padding: 20px;
-      border: 1px solid rgba(124, 246, 255, 0.12);
-      display: grid;
-      gap: 12px;
-    }
-
-    .project-card span {
-      color: var(--accent);
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .project-card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 20px;
-      margin-top: 24px;
-    }
-
-    .stat {
-      padding: 18px;
-      border-radius: 16px;
-      background: var(--surface-light);
-      border: 1px solid rgba(124, 246, 255, 0.12);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.6rem;
-      margin-bottom: 6px;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 16px;
-    }
-
-    .timeline-item {
-      padding: 16px;
-      border-radius: 14px;
-      border: 1px dashed rgba(124, 246, 255, 0.2);
-      background: rgba(20, 26, 44, 0.55);
-    }
-
-    .timeline-item h4 {
-      margin-bottom: 6px;
-    }
-
-    .contact {
-      display: grid;
-      gap: 12px;
-      padding: 28px;
-      border-radius: 22px;
-      background: linear-gradient(140deg, rgba(124, 246, 255, 0.12), rgba(27, 35, 64, 0.9));
-      border: 1px solid rgba(124, 246, 255, 0.18);
-    }
-
-    footer {
-      padding: 32px 6vw 48px;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 16px;
-      border-top: 1px solid rgba(124, 246, 255, 0.08);
-    }
-
-    @media (max-width: 720px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-
-      nav {
-        flex-wrap: wrap;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="page">
     <header>
       <div class="logo">
-        <div class="logo-mark">PS</div>
-        Полярный Штрих
+        <div class="logo-mark">SL</div>
+        Северная Линия
       </div>
       <nav>
-        <a href="#projects">Проекты</a>
-        <a href="#process">Процесс</a>
-        <a href="#services">Услуги</a>
-        <a href="#contact">Контакты</a>
+        <a href="index.html" aria-current="page">Главная</a>
+        <a href="story.html">Вторая</a>
+        <a href="atelier.html">Третья</a>
       </nav>
       <a class="cta" href="#contact">Связаться</a>
     </header>
 
     <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-text">
-          <h1>Портфолио визуального дизайнера, который соединяет свет, структуру и чувство бренда.</h1>
-          <p>
-            Привет! Я Полина Сорокина, арт‑директор и дизайнер интерфейсов. Создаю айдентику, digital‑продукты и
-            визуальные системы для брендов, которые хотят звучать современно и уверенно.
-          </p>
-          <div class="hero-actions">
-            <a class="cta" href="#projects">Смотреть работы</a>
-            <a class="secondary-btn" href="#process">Как я работаю</a>
-          </div>
+      <div>
+        <h1>Тёплая визуальная студия для брендов, которым нужен спокойный, стильный и ясный образ.</h1>
+        <p>
+          Здесь живёт компактное портфолио: главная страница, страница «Истории» и страница «Ателье». Каждая с разным
+          настроением, но с общей палитрой и визуальным ритмом.
+        </p>
+        <div class="hero-actions">
+          <a class="cta" href="story.html">Перейти ко второй странице</a>
+          <a class="secondary" href="atelier.html">Смотреть третью</a>
         </div>
-        <div class="hero-card">
-          <h2>Быстрый профиль</h2>
-          <ul>
-            <li>⚡ 8 лет опыта в брендинге и UI/UX.</li>
-            <li>🎯 120+ проектов для стартапов и корпораций.</li>
-            <li>🌍 Работаю на русском и английском.</li>
-            <li>✨ Люблю визуальную ясность и смелые формы.</li>
-          </ul>
-        </div>
+      </div>
+      <div class="card">
+        <img src="images/hero-01.svg" alt="Коллаж с тёплыми формами и карточкой проекта" />
       </div>
     </section>
 
     <section class="section" id="projects">
-      <h3 class="section-title">Избранные проекты</h3>
-      <div class="projects">
-        <article class="project-card">
-          <span>Neon River</span>
-          <h4>Айдентика и сайт для медиастудии</h4>
-          <p>Сформировала визуальный язык, собрала дизайн‑систему и провела редизайн сайта за 6 недель.</p>
+      <h2 class="section-title">Избранные проекты</h2>
+      <div class="grid">
+        <article class="project">
+          <span>North Echo</span>
+          <h3>Айдентика кофе-бренда</h3>
+          <p>Логотип, упаковка, визуальный язык для линейки с локальными ингредиентами.</p>
         </article>
-        <article class="project-card">
-          <span>Atlas Health</span>
-          <h4>Дизайн интерфейса медицинской платформы</h4>
-          <p>Прототипы, UI‑кит и оптимизация пользовательских сценариев с ростом конверсии на 28%.</p>
+        <article class="project">
+          <span>June Studio</span>
+          <h3>Визуальная система для студии</h3>
+          <p>Собрали UI‑кит, цветовые ключи, иллюстрации и лендинг для команды.</p>
         </article>
-        <article class="project-card">
-          <span>Orbital Coffee</span>
-          <h4>Брендинг сети кофеен</h4>
-          <p>Логотип, упаковка и оформление пространства в стиле «космического минимализма».</p>
-        </article>
-        <article class="project-card">
-          <span>Clarity Labs</span>
-          <h4>Презентации для инвесторов</h4>
-          <p>Серия слайд‑деков, инфографика и иллюстрации для раундов Seed и Series A.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <h3 class="section-title">Процесс и подход</h3>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>1. Исследование и стратегия</h4>
-          <p>Интервью, анализ конкурентов, формулировка позиционирования и ключевых сообщений.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>2. Концепция и визуальная система</h4>
-          <p>Подбор настроения, создание палитры, типографики, графики и принципов визуального языка.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>3. Дизайн и внедрение</h4>
-          <p>Детальные макеты, гайды и сопровождение команды разработки до релиза.</p>
-        </div>
-      </div>
-      <div class="stats">
-        <div class="stat">
-          <strong>4.9/5</strong>
-          Средняя оценка от клиентов
-        </div>
-        <div class="stat">
-          <strong>72 часа</strong>
-          Среднее время на первый концепт
-        </div>
-        <div class="stat">
-          <strong>18</strong>
-          Постоянных брендов в сопровождении
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="services">
-      <h3 class="section-title">Услуги</h3>
-      <div class="projects">
-        <article class="project-card">
-          <h4>Айдентика и бренд‑система</h4>
-          <p>Лого, тональность, визуальные правила, мерч, шаблоны для команды.</p>
-        </article>
-        <article class="project-card">
-          <h4>UI/UX дизайн</h4>
-          <p>Продуктовые интерфейсы, прототипы, дизайн‑системы и тестирование.</p>
-        </article>
-        <article class="project-card">
-          <h4>Арт‑дирекшн</h4>
-          <p>Запуск рекламных кампаний, визуальные концепции и супервизия креативных команд.</p>
+        <article class="project">
+          <span>Quiet Lab</span>
+          <h3>Редизайн продукта</h3>
+          <p>Упростили ключевые сценарии и разработали аккуратные сценарии onboarding.</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="contact">
-      <div class="contact">
-        <h3 class="section-title">Давайте создавать вместе</h3>
-        <p>Пишите, если нужен сильный визуальный стиль или свежий взгляд на продукт.</p>
-        <p>
-          📩 hello@polarstroke.studio<br />
-          📍 Алматы · удалённо по всему миру
-        </p>
-        <div class="hero-actions">
-          <a class="cta" href="mailto:hello@polarstroke.studio">Написать письмо</a>
-          <a class="secondary-btn" href="https://t.me" target="_blank" rel="noreferrer">Telegram</a>
+      <div class="split">
+        <div>
+          <h2 class="section-title">Давайте вместе</h2>
+          <p class="list">Напишите, если нужен понятный визуальный язык или портфолио под запуск.</p>
+          <div class="hero-actions">
+            <a class="cta" href="mailto:hello@nline.studio">hello@nline.studio</a>
+            <a class="secondary" href="story.html">Смотреть кейсы</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Что входит</h3>
+          <div class="list">
+            <span>— Брендинг и визуальная система.</span>
+            <span>— Обложки, презентации, лендинги.</span>
+            <span>— Поддержка запуска и сопровождение.</span>
+          </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <span>© 2025 Полярный Штрих. Все права защищены.</span>
-      <span>Сайт собран вручную, без шаблонов.</span>
+      <span>© 2025 Северная Линия</span>
+      <span>Три страницы · Три настроения</span>
     </footer>
   </div>
 </body>
