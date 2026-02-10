@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 215 20.2% 65.1%;
+  --radius: 0.75rem;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+.container-default {
+  @apply mx-auto w-full max-w-6xl px-6;
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-tight;
+}
+
+.section-subtitle {
+  @apply mt-3 text-base text-muted-foreground;
+}
+
+.card {
+  @apply rounded-2xl border border-border bg-white p-6 shadow-sm;
+}
